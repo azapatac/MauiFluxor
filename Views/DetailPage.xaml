@@ -6,7 +6,9 @@
     <VerticalStackLayout
         VerticalOptions="CenterAndExpand" 
         HorizontalOptions="CenterAndExpand">
-        <Label 
-            Text="{Binding Message}"/>
+        <Button                
+            Text="{Binding Message}" 
+            Command="{Binding CountCommand}"
+            HorizontalOptions="Fill" />
     </VerticalStackLayout>
 </ContentPage>

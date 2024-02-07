@@ -2,16 +2,12 @@
 
 using Fluxor;
 using MauiFluxor.Store.CounterUseCase;
+using Prism.Navigation;
 
-public class DetailPageViewModel : BasePageViewModel
-{
-    private readonly IState<CounterState> CounterState;
+public partial class DetailPageViewModel : BasePageViewModel{
 
-    public string Message { get; set; } = string.Empty;
-
-    public DetailPageViewModel(INavigationService navigationService, IState<CounterState> counterState) : base(navigationService)
+    public DetailPageViewModel(INavigationService navigationService, IStore store, IDispatcher dispatcher, IState<CounterState> counterState) : base(navigationService, store, dispatcher, counterState)
     {
-        CounterState = counterState;
     }
 
     public override void Initialize(INavigationParameters parameters)
