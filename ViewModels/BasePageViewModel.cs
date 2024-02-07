@@ -2,7 +2,7 @@
 
 namespace MauiFluxor.ViewModels;
 
-public partial class BasePageViewModel : BindableBase, IInitialize
+public class BasePageViewModel : BindableBase, IInitialize
 {
     protected INavigationService NavigationService { get; set; }
 
@@ -12,10 +12,4 @@ public partial class BasePageViewModel : BindableBase, IInitialize
     }
 
     public virtual void Initialize(INavigationParameters parameters) { }
-
-    [RelayCommand]
-    public async Task Back()
-    {
-        await NavigationService.GoBackAsync();
-    }
 }
