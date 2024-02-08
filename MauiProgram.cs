@@ -1,4 +1,5 @@
 ﻿using Fluxor;
+using MauiFluxor.Services;
 using MauiFluxor.ViewModels;
 
 namespace MauiFluxor;
@@ -20,6 +21,9 @@ public static class MauiProgram
                     container.RegisterForNavigation<DetailPage, DetailPageViewModel>("Detail");
                     container.RegisterForNavigation<MainPage, MainPageViewModel>(Main);
                     container.RegisterForNavigation<NavigationPage>(Navigation);
+                    container.RegisterForNavigation<WeatherPage, WeatherPageViewModel>("Weather");
+
+                    container.RegisterSingleton<IWeatherForecastService, WeatherForecastService>();
                 })
                 .OnAppStart(async app =>
                 {                    

@@ -74,10 +74,16 @@
 	  <Folder Include="Views\" />
 	  <Folder Include="Store\" />
 	  <Folder Include="Store\CounterUseCase\" />
+	  <Folder Include="Shared\" />
+	  <Folder Include="Services\" />
+	  <Folder Include="Store\WeatherUseCase\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <None Remove="Views\" />
 	  <None Remove="Store\" />
 	  <None Remove="Store\CounterUseCase\" />
+	  <None Remove="Shared\" />
+	  <None Remove="Services\" />
+	  <None Remove="Store\WeatherUseCase\" />
 	</ItemGroup>
 </Project>

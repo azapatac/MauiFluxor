@@ -22,4 +22,10 @@ public partial class MainPageViewModel : BasePageViewModel
     {
         await NavigationService.NavigateAsync("Detail");
     }
+
+    [RelayCommand]
+    public async Task Weather()
+    {
+        await NavigationService.NavigateAsync("Weather");
+    }
 }

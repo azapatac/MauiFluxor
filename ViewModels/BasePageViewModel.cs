@@ -23,6 +23,12 @@ public partial class BasePageViewModel : BindableBase, IInitialize
         Store = store;
     }
 
+    public BasePageViewModel(INavigationService navigationService, IDispatcher dispatcher)
+    {
+        NavigationService = navigationService;
+        Dispatcher = dispatcher;
+    }
+
     public virtual void Initialize(INavigationParameters parameters) { }
 
 
